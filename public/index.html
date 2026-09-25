@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candy Package Manager</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 2.5rem;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    h1 { font-size: 2.5rem; color: #f43f5e; margin-bottom: 0.5rem; }
+    p { color: #8b949e; font-size: 1rem; margin-bottom: 2rem; }
+    .command-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    code { font-family: monospace; color: #7ee787; font-size: 0.95rem; }
+    button {
+      background: #238636;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    button:hover { background: #2ea043; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Candy 🍬</h1>
+    <p>A lightweight, native Windows CLI package manager.</p>
+    <div class="command-box">
+      <code id="cmd">irm candy-pkg.pages.dev/install.ps1 | iex</code>
+      <button onclick="copyCommand()">Copy</button>
+    </div>
+  </div>
+
+  <script>
+    function copyCommand() {
+      const text = document.getElementById("cmd").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector("button");
+        btn.innerText = "Copied!";
+        btn.style.background = "#1f6feb";
+        setTimeout(() => {
+          btn.innerText = "Copy";
+          btn.style.background = "#238636";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
