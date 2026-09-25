@@ -20,7 +20,7 @@ Create a file named `<app_name>.json` (for example: `obs.json` or `notepadpluspl
   "name": "obs",
   "version": "30.2.2",
   "description": "Free and open source software for video recording and live streaming",
-  "url": "[https://github.com/obsproject/obs-studio/releases/download/30.2.2/OBS-Studio-30.2.2-Full-Installer-x64.exe](https://github.com/obsproject/obs-studio/releases/download/30.2.2/OBS-Studio-30.2.2-Full-Installer-x64.exe)",
+  "url": "https://github.com/obsproject/obs-studio/releases/download/30.2.2/OBS-Studio-30.2.2-Full-Installer-x64.exe",
   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "bin": "obs64.exe"
 }
