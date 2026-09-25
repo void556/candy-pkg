@@ -1,0 +1,14 @@
+# Nuitka build artifacts
+*.build/
+*.dist/
+*.onefile-build/
+candy.exe
+candy.bin
+
+# Local runtime files
+CANDY_DIR/
+config.json
+
+# Python environment
+__pycache__/
+*.pyc
